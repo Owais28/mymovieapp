@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 export const Card = styled.div`
-border-radius : 30px;
-padding:30px;
-background-color:white;
+border-radius : 15px;
+padding:20px;
+background-color:;white
 width:100%;
 color:black;
-box-shadow: 0px 2px 12px -10px black;
-border : 1px solid whitesmoke;
+border : 1px solid black;
 `
 export const CardWithImg = styled.div`
     border-radius : 30px;

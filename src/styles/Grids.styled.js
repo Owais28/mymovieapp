@@ -30,7 +30,7 @@ export const GridOfThree = styled.div`
 export const GridOfOne = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 50px;
+    grid-row-gap: 25px;
     justify-content: center;
     align-items: center;
 `

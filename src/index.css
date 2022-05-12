@@ -36,4 +36,17 @@ code {
 
 }
 
+.moviecard {
+  display : grid;
+  grid-template-columns: .4fr 1fr;
+}
 
+
+.moviecard__imgContainer {
+  width: 100%;
+}
+
+.moviecard__imgContainer img {
+  object-fit: cover;
+  width: 100%;
+}
