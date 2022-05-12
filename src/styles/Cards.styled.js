@@ -8,6 +8,8 @@ color:black;
 border : 1px solid aliceblue;
 height : 150px;
 overflow:hidden; 
+display : flex;
+align-items:center;
 `
 export const CardWithImg = styled.div`
     border-radius : 30px;

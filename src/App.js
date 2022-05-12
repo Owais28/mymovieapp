@@ -9,19 +9,23 @@ import MovieList from './components/MovieList'
 const API_URL = 'http://www.omdbapi.com/?apikey=d500b261'
 
 
+
+
 function App() {
   
+  
+    
+  const [movies, setMovies] = React.useState([]);
+  const [searchTerm, setSearchTerm] = React.useState('spider')
+
   const searchMovie = async (title='spider') => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json()
     const movies = data.Search
     setMovies(movies)
     console.log(movies)
-  
   }
-  const [movies, setMovies] = React.useState([]);
-  const [searchTerm, setSearchTerm] = React.useState('spider')
-
+  
   React.useEffect(() => {
     searchMovie(searchTerm);
   }

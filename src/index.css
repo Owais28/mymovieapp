@@ -45,15 +45,20 @@ code {
 
 
 .moviecard__imgContainer {
-  width: 100%;
+  width: 150px;
+  max-width: 150px;
+  min-width: 150px;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  margin-right: 20px;
+
 }
 
 
-.moviecard img {
+.moviecard__imgContainer img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
 }

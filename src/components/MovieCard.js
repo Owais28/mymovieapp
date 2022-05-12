@@ -8,7 +8,6 @@ export default function MovieCard(props) {
   return (
     <div>
         <Card>
-            <div className='moviecard'>
                 <div className='moviecard__imgContainer'>
                     <img src={img} alt=""/>
                 </div>
@@ -18,7 +17,6 @@ export default function MovieCard(props) {
                     </HeadingTwo>
                     <p>Year </p>
                 </div>
-            </div>
             
             
         </Card>
