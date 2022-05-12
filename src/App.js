@@ -11,11 +11,12 @@ const API_URL = 'http://www.omdbapi.com/?apikey=d500b261'
 
 function App() {
   
-  const searchMovie = async (title='spiderman') => {
+  const searchMovie = async (title='spider') => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json()
-    setMovies(data.Search)
-    console.log(data.Search)
+    const movies = data.Search
+    setMovies(movies)
+    console.log(movies)
   
   }
   const [movies, setMovies] = React.useState([]);
