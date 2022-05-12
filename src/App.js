@@ -36,14 +36,15 @@ function App() {
       setSearchTerm(event.target.value)
     }
 
-    function handleClear() {
+    function handleClear(event) {
+      event.target.value = ""
       setSearchTerm('');
     }
 
   return (
     <Section>
       <Container>
-        <SearchBar onSearch={handleSearch} onClear={handleClear}/>
+        <SearchBar searchTerm={searchTerm} onSearch={handleSearch} onClear={handleClear}/>
         <MovieList movies={movies}/>
       </Container>
     </Section>
