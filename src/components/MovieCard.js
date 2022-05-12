@@ -7,11 +7,14 @@ export default function MovieCard(props) {
     const img = props.Poster;
   return (
     <div>
-        <Card className='moviecard'>
+        <Card>
+            <div className='moviecard'>
             <div className='moviecard__imgContainer'>
             <img src={img} alt=""/>
             </div>
             <h1>{title}</h1>
+            </div>
+            
             
         </Card>
     </div>
