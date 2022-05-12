@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 export const Card = styled.div`
-border-radius : 15px;
+border-radius : 10px;
 padding:20px;
 background-color:;white
 width:100%;
 color:black;
-border : 1px solid black;
+border : 1px solid aliceblue;
+height : 150px;
+overflow:hidden; 
 `
 export const CardWithImg = styled.div`
     border-radius : 30px;

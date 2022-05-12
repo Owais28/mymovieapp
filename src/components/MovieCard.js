@@ -9,10 +9,10 @@ export default function MovieCard(props) {
     <div>
         <Card>
             <div className='moviecard'>
-            <div className='moviecard__imgContainer'>
-            <img src={img} alt=""/>
-            </div>
-            <h1>{title}</h1>
+                <div className='moviecard__imgContainer'>
+                    <img src={img} alt=""/>
+                </div>
+                <h1>{title}</h1>
             </div>
             
             
