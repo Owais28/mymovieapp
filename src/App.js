@@ -23,9 +23,9 @@ function App() {
     const data = await response.json()
     const movies = data.Search
     setMovies(movies)
-    console.log(movies)
+    // console.log(movies)
   }
-  
+
   React.useEffect(() => {
     searchMovie(searchTerm);
   }
@@ -36,10 +36,14 @@ function App() {
       setSearchTerm(event.target.value)
     }
 
+    function handleClear() {
+      setSearchTerm('');
+    }
+
   return (
     <Section>
       <Container>
-        <SearchBar onSearch={handleSearch}/>
+        <SearchBar onSearch={handleSearch} onClear={handleClear}/>
         <MovieList movies={movies}/>
       </Container>
     </Section>

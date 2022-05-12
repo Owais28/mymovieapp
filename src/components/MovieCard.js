@@ -4,7 +4,7 @@ import { GridOfTwo } from '../styles/Grids.styled';
 import {HeadingOne, HeadingThree, HeadingTwo} from '../styles/Headings.styled'
 export default function MovieCard(props) {
     const title = props.Title || 'none';
-    const img = props.Poster || 'none';
+    const img = props.Poster || 'https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png';
     const year = props.Year || 'none';
     const type = props.Type || 'none';
 
