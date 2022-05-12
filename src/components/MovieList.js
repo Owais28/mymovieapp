@@ -8,7 +8,7 @@ export default function MovieList(props) {
   return (
     <GridOfOne>
         {movies.map(
-            (movie) => <MovieCard id={movie.imdbId} {...movie}/>
+            (movie) => <MovieCard key={movie.imdbID}id={movie.imdbId} {...movie}/>
         )}
     </GridOfOne>
   )
