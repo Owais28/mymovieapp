@@ -16,15 +16,12 @@ function App() {
   const [searchTerm, setSearchTerm] = React.useState('spider')
 
   const fetchMovie = async (title='spider') => {
-    const results = await fetch(`/.netlify/functions/searchMovie?title=${title}`)
-    const data = await results.json()
+    const results = await axios.get(`/.netlify/functions/searchMovie?title=${title}`)
+    const data = await results.data
     const response = data.data
-    // const mList = results.json()
-    // const response = await fetch(`${API_URL}&s=${title}`);
-    // const data = await response.json()
-    // const movies = data.Search
-    setMovies(response.Search)
-    console.log(response.Search)
+    const allSearchedMovies = response.Search;
+    setMovies(allSearchedMovies)
+    // console.log(allSearchedMovies)
   }
 
   React.useEffect(() => {
