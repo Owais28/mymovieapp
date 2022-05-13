@@ -5,10 +5,6 @@ import SearchBar from './components/SearchBar'
 import React from 'react'
 import MovieList from './components/MovieList'
 import axios from 'axios'
-// d500b261
-
-// const API_URL = 'http://www.omdbapi.com/?apikey=d500b261'
-
 
 
 
@@ -28,7 +24,7 @@ function App() {
     // const data = await response.json()
     // const movies = data.Search
     setMovies(response.Search)
-    // console.log(response.Search)
+    console.log(response.Search)
   }
 
   React.useEffect(() => {
