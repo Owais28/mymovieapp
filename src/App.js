@@ -28,7 +28,7 @@ function App() {
     // const data = await response.json()
     // const movies = data.Search
     setMovies(response.Search)
-    console.log(response.Search)
+    // console.log(response.Search)
   }
 
   React.useEffect(() => {
