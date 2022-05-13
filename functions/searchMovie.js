@@ -45,7 +45,6 @@ const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts'
 
 exports.handler = async (event, context) => {
 
-  const API_URL = 'http://www.omdbapi.com/?apikey'
   
   const title = event.queryStringParameters.title
 
@@ -53,7 +52,7 @@ exports.handler = async (event, context) => {
 
 
   try {
-    response = await axios.get(`${API_URL}=${process.env.REACT_APP_API_KEY}&s=${title}`)
+    response = await axios.get(`${process.env.REACT_APP_URL}&s=${title}`)
     // console.log(process.env.REACT_APP_API_KEY)
     // handle response
   } catch (err) {
