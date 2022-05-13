@@ -8,7 +8,7 @@ const SearchBar = (props) => {
         <div>
             <Searchbar>
                 <FiSearch className='icon search__icon'/>
-                <input value={props.searchTerm}className='searchbar__input' onChange={props.onSearch} type="text" name="" id=""/>
+                <input value={props.searchTerm} className='searchbar__input' onChange={props.onSearchChange} type="search" name="" id=""/>
                 <IoMdClose className='icon close__icon' onClick={props.onClear}/>
             </Searchbar>
         </div>

@@ -4,9 +4,10 @@ import Section from './styles/Sections.styled'
 import SearchBar from './components/SearchBar'
 import React from 'react'
 import MovieList from './components/MovieList'
+import axios from 'axios'
 // d500b261
 
-const API_URL = 'http://www.omdbapi.com/?apikey=d500b261'
+// const API_URL = 'http://www.omdbapi.com/?apikey=d500b261'
 
 
 
@@ -18,16 +19,21 @@ function App() {
   const [movies, setMovies] = React.useState([]);
   const [searchTerm, setSearchTerm] = React.useState('spider')
 
-  const searchMovie = async (title='spider') => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json()
-    const movies = data.Search
-    setMovies(movies)
-    // console.log(movies)
+  const fetchMovie = async (title='spider') => {
+    const results = await fetch(`/.netlify/functions/searchMovie?title=${title}`)
+    const data = await results.json()
+    const response = data.data
+    // const mList = results.json()
+    // const response = await fetch(`${API_URL}&s=${title}`);
+    // const data = await response.json()
+    // const movies = data.Search
+    setMovies(response.Search)
+    console.log(response.Search)
   }
 
   React.useEffect(() => {
-    searchMovie(searchTerm);
+    fetchMovie(searchTerm)
+    // searchMovie(searchTerm);
   }
 
   ,[searchTerm])
@@ -44,7 +50,7 @@ function App() {
   return (
     <Section>
       <Container>
-        <SearchBar searchTerm={searchTerm} onSearch={handleSearch} onClear={handleClear}/>
+        <SearchBar search={searchTerm} onSearchChange={handleSearch} onClear={handleClear}/>
         <MovieList movies={movies}/>
       </Container>
     </Section>
